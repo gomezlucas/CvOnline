@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css?family=La+Belle+Aurore|Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+
+:root {
+  --redPurple: #0c0a3e;
+  --carrotOrange: #ed622f;
+  --darkCoral: #cd5334;
+  --paleRobin: #7de2d1;
+  --snow: #fafafa;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Opens Sans", sans-serif;
+  background: linear-gradient(
+      rgba(128, 128, 128, 0.7),
+      rgba(128, 128, 128, 0.7)
+    ),
+    url("../img/bodyBcg.jpeg");
+}
+
+/*-------------------------------------------Global Styles-----------------------------------------*/
+.bell-fonts {
+  font-family: "La Belle Aurore", cursive;
+}
+
+.sans-pro {
+  font-family: "Source Sans Pro", sans-serif;
+}
+.showItem {
+  display: block;
+}
+
+.section-padding {
+  margin-top: 3rem;
+}
+
+/*Title */
+.section-title {
+  padding: 1rem 0.5rem;
+  align-self: center;
+}
+
+.section-title__name {
+  font-size: 2.4rem;
+  letter-spacing: .2rem;
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+.section-title__underline {
+  background: var(--darkCoral);
+  width: 5rem;
+  height: 0.25rem;
+}
+
+.section-title__text {
+  color: black;
+  letter-spacing: 0.1rem;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+}
+       
+
+.grid-container {
+  max-width: 85vw;
+  margin: 2rem auto;
+  grid-template-columns: 1.5fr 1fr;
+  display: grid;
+  grid-row-gap: 2rem;
+}
+
+.section-profile__image {
+  width: 50%;
+  margin: 2rem auto;
+  position: relative;
+}
+
+.section-profile__image::before{
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: -1.7rem;
+  width: 100%;
+  height: 100%;
+  outline: 0.5rem solid var(--mainYellow);
+  z-index: 10;
+  transition: all 1s ease-in-out;
+  border: 5px solid var(--snow);
+  border-radius: 50%;
+}
+
+.section-profile__image:hover::before{
+  top: -8px;
+  left: -6px;
+}
+
+
+
+.section-profile__image_img {
+  width: 100%;
+  border-radius: 50%;
+  position: relative;
+  z-index: 11;
+  }
+
+ 
+@media screen and (max-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/*-----------------------------------------End Global Styles---------------------------------------*/
+/*----------------------------------------Loader --------------------------------------------------*/
+.preloader-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0c0a3e;
+  transition: all 1s ease-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+}
+
+.preloader-text {
+  color: var(--carrotOrange);
+  letter-spacing: 0.7rem;
+  margin-left: 1.8rem;
+}
+/*----------------------------------------End Loader-----------------------------------------------*/
+
+/*-----------------------------------------Header---------------------------------------------------*/
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+/*Banner */
+.banner {
+  text-align: center;
+  z-index: 3;
+  color: var(--snow);
+}
+.banner__title {
+  font-size: 7rem;
+  line-height: 1.2;
+  font-style: italic;
+}
+
+.banner__subtitle {
+  font-size: 1.8rem;
+  letter-spacing: 1rem;
+}
+
+.banner__social {
+  display: block;
+  text-decoration: none;
+  border: 1.3px solid var(--snow);
+  border-radius: 50%;
+  padding: 0.25rem;
+  transition: all 0.5s ease;
+  color: var(--snow);
+}
+
+.banner__icons {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 2rem 2rem;
+  grid-column-gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.banner__social:hover {
+  background: var(--darkCoral);
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    background: url(../img/cityBackground-media.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  .banner__title {
+    font-size: 3rem;
+  }
+  .banner__subtitle {
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+  }
+}
+
+/*NavBar Button */
+.navbar-button__container {
+  border: 2px solid white;
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2rem;
+  transition: all 1s ease;
+  cursor: pointer;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 9999
+}
+
+.navbar-button__bar1,
+.navbar-button__bar2,
+.navbar-button__bar3 {
+  height: 3px;
+  width: 26px;
+  margin: 0.47rem 0.45rem;
+  background: white;
+  transition: all 1s ease;
+}
+.navbar-button__container:hover {
+  background: var(--darkCoral);
+}
+.change .navbar-button__bar1 {
+  transform: rotate(-45deg) translate(-7px, 7px);
+}
+.change .navbar-button__bar2 {
+  opacity: 0;
+}
+.change .navbar-button__bar3 {
+  transform: rotate(45deg) translate(-7px, -7px);
+}
+
+/*NavBar*/
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 20%;
+  background: #0c0a3e91;
+  position: fixed;
+  transition: all 0.9s ease-in-out;
+  overflow: hidden;
+  z-index: 3;
+  width: 0;
+}
+
+.navbar-show {
+  width: 15rem;
+}
+
+.navbar-links {
+  margin-top: 4rem;
+  list-style-type: none;
+}
+
+.navbar-links__single {
+  display: block;
+   text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.25rem;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.navbar-links__single a{
+  text-decoration: none;
+  color: white;
+  font-style: italic;
+
+}
+
+.navbar-links__single:hover {
+  background: var(--darkCoral);
+  padding-left: 0.5rem;
+}
+
+/*Video*/
+.video__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.video__item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*--------------------------------------End Header---------------------------------------------------*/
+
+/*---------------------------------------Portfolio--------------------------------------------------*/
+
+.portfolio{
+    background-color: var(--redPurple);
+    background: url("../img/connection-contemporary-data-450035.jpg")center/cover fixed no-repeat;
+ }
+
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.portfolio .section-title__name{
+
+     margin-top: 2rem;
+ }
+ 
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 4rem;
+}
+
+ 
+.portfolio-singleItem {
+    max-width: 90vw;
+    margin: 2rem;
+    z-index: 0;
+}
+
+.portfolio-singleItem-container
+{
+    position: relative;
+    overflow: hidden;
+    background: var(--darkCoral);
+    max-height: 185px;
+}
+
+@media screen and (max-width: 768px){
+    .portfolio-singleItem-container
+{ 
+    height: auto;
+
+}
+}
+.portfollio-singleItem__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+
+}
+
+.portfolio-singleItem-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-decoration: none;
+  color: var(--darkCoral);
+  font-size: 4rem;
+  transition: all 0.5s ease;
+  transform: scale(0);
+}
+
+.portfolio-singleItem__text{
+    background:white;
+    padding: 1rem;
+    font-style: italic;
+    z-index: 2  ;
+}
+
+.portfolio-singleItem:hover .portfollio-singleItem__img {
+  transform: scale(1.2);
+}
+
+.portfolio-singleItem:hover .portfollio-singleItem__img {
+  opacity: 0.5;
+}
+.portfolio-singleItem:hover .portfolio-singleItem-icon {
+  transform: scale(1.1) translate(-50%, -50%);
+}
+
+.portfolio-singleItem__name{
+    color: var(--darkCoral);
+    font-size: 1.5rem;
+}
+
+.portfolio-singleItem__line{
+    background: var(--darkCoral);
+    height: 2px;
+    margin-bottom: 0.7rem;
+    text-align: right;
+ }
+
+ .portfolio-singleItem__resource{
+     text-align: right;
+ }
+/*End Modal */
+/*------------------------------------End Portfolio--------------------------------------------------*/
