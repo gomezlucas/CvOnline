@@ -122,6 +122,7 @@ body {
 .preloader-container {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -139,6 +140,12 @@ body {
   color: var(--carrotOrange);
   letter-spacing: 0.7rem;
   margin-left: 1.8rem;
+}
+
+@media screen and (max-width:768px){
+  .preloader-text{
+    text-align: center;
+  }
 }
 /*----------------------------------------End Loader-----------------------------------------------*/
 

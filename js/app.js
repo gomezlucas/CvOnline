@@ -37,5 +37,5 @@ UI.prototype.navbarButtonClick = function(){
 
 // Hide Loader
 UI.prototype.hideLoader = function(){
-    document.querySelector(".preloader-container").style.display = "none"
+    document.querySelector(".preloader-container").style.display = "none";
 }
