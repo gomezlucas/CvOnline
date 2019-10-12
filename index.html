@@ -24,9 +24,10 @@
             <h1 class="banner__title .sans-pro">Lucas Gomez</h1>
             <h3 class="banner__subtitle sans-pro">Web Developer</h3>
             <div class="banner__icons">
-                <a href="https://www.linkedin.com/in/lucas-damian-gomez" class="banner__social" target="_blank" ><i class="fab fa-linkedin-in"></i>
+                <a href="https://www.linkedin.com/in/lucas-damian-gomez" class="banner__social" target="_blank"><i
+                        class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://github.com/gomezlucas?tab=repositories" class="banner__social" target="_blank"> 
+                <a href="https://github.com/gomezlucas?tab=repositories" class="banner__social" target="_blank">
                     <i class="fab fa-github"></i>
                 </a>
             </div>
@@ -45,29 +46,34 @@
             <ul class="navbar-links">
                 <li class="navbar-links__single"> <a class="sans-pro" href="#home">Home</a></li>
                 <li class="navbar-links__single"><a href="#profile">Profile</a></li>
-                <li class="navbar-links__single"><a href="portfolio">Portfolio</a></li>
-           
+                <li class="navbar-links__single"><a href="#portfolio">Portfolio</a></li>
+
             </ul>
         </nav>
         <!--End NavBar -->
         <!--Video -->
         <article class="video__container">
             <video class="video__item" autoplay muted loop>
-                <source src="./video/cityVideo.mp4" type="video/mp4" />
+                <source src="./video/cityVideo.mp4" type="video/mp4" media="(min-width: 768px)"> />
                 Your browser doesnt support the video
             </video>
         </article>
         <!--End Video -->
     </header>
+
+
     <!--End Header -->
 
     <!--Section profile-->
-    <section class="profile section-padding" id="profile">
+    <section class="profile" id="profile">
         <!--Title Section-->
         <div class="grid-container">
             <div class="section-title">
-                <h1 class="section-title__name">Profile</h1>
-                <div class="section-title__underline"></div>
+
+                <div class="left">
+                    <h1 class="section-title__name">Profile</h1>
+                    <div class="section-title__underline"></div>
+                </div>
                 <p class="section-title__text">
                     An energetic WebDev Junior, fast learner, always looking for new
                     challenges. My objective is to work in a company or in projects
@@ -86,16 +92,17 @@
     <section class="portfolio" id="portfolio">
         <div class="section-title">
             <div class="right">
-            <h1 class="section-title__name">Portfolio</h1>
-            <div class="section-title__underline"></div>
-        </div>
+                <h1 class="section-title__name">Portfolio</h1>
+                <div class="section-title__underline"></div>
+            </div>
         </div>
         <div class="portfolio-container">
             <!--Single Item-->
             <div class="portfolio-singleItem">
                 <div class="portfolio-singleItem-container">
                     <img src="./img/ResortScreenshot.png" class="portfollio-singleItem__img" alt="Sia website" />
-                    <a href="https://react-resortbeach-tutorial.netlify.com" target="_blank" class="portfolio-singleItem-icon">
+                    <a href="https://react-resortbeach-tutorial.netlify.com" target="_blank"
+                        class="portfolio-singleItem-icon">
                         <i class="fas fa-search"></i>
                     </a></div>
                 <div class="portfolio-singleItem__text">
@@ -110,12 +117,13 @@
             <div class="portfolio-singleItem">
                 <div class="portfolio-singleItem-container"><img src="./img/RandomUserScreenshot.png"
                         class="portfollio-singleItem__img" alt="Sia website" />
-                    <a href="https://gomezlucas.github.io/Random-User-Generator-Code-Challenge/" target="_blank" class="portfolio-singleItem-icon">
+                    <a href="https://gomezlucas.github.io/Random-User-Generator-Code-Challenge/" target="_blank"
+                        class="portfolio-singleItem-icon">
                         <i class="fas fa-search"></i>
                     </a></div>
                 <div class="portfolio-singleItem__text">
                     <h5 class="portfolio-singleItem__name">
-                            Random User Generator
+                        Random User Generator
                     </h5>
                     <div class="portfolio-singleItem__line"></div>
                     <p class="portfolio-singleItem__resource">Html - Css - JsEs6 - Api </p>
@@ -130,7 +138,7 @@
                     </a></div>
                 <div class="portfolio-singleItem__text">
                     <h5 class="portfolio-singleItem__name">
-                       Band Website
+                        Band Website
                     </h5>
                     <div class="portfolio-singleItem__line"></div>
                     <p class="portfolio-singleItem__resource">Html - Css - Bootstrap - Js </p>
@@ -146,7 +154,7 @@
                     </a></div>
                 <div class="portfolio-singleItem__text">
                     <h5 class="portfolio-singleItem__name">
-                     Clipboard landing page
+                        Clipboard landing page
                     </h5>
                     <div class="portfolio-singleItem__line"></div>
                     <p class="portfolio-singleItem__resource">Html - Css - Flexbox - Grid </p>
@@ -162,7 +170,7 @@
                     </a></div>
                 <div class="portfolio-singleItem__text">
                     <h5 class="portfolio-singleItem__name">
-                     Home Banking Project
+                        Home Banking Project
                     </h5>
                     <div class="portfolio-singleItem__line"></div>
                     <p class="portfolio-singleItem__resource"> Bootstrap - Php - Laravel - Paas(Heroku) </p>
@@ -191,7 +199,38 @@
 
     </section>
     <!-- Portfolio Section-->
+    <!--Footer-->
+    <footer id="footer" class="footer">
+        <div class="section-title footer-title">
+            <div class="right">
+                <h1 class="section-title__name">Contact Me</h1>
+                <div class="section-title__underline"></div>
+            </div>
+        </div>
 
+        <div class="footer-info">
+            <h2 class="footer-name">Lucas Gomez</h2>
+            <a class="footer-email" href="mailto:gomez-lucas@live.com.ar">gomez-lucas@live.com.ar</a>
+        </div>
+
+        <div class="banner__icons footer-icons">
+            <a href="https://www.linkedin.com/in/lucas-damian-gomez" class="banner__social" target="_blank"><i
+                    class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/gomezlucas?tab=repositories" class="banner__social" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:gomez.d.lucas@gmail.com" class="banner__social" target="_blank">
+                <i class="fab fa-google"></i>
+            </a>
+
+        </div>
+
+
+
+    </footer>
+
+    <!--Footer-->
     <script src="./js/app.js"></script>
 </body>
 
