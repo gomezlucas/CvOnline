@@ -592,6 +592,11 @@ background:white;
   font-size: 1rem;
 }
 
+.portfolio-singleItem__name a {
+  color: var(--darkCoral);
+text-decoration: none;
+}
+
 .portfolio-singleItem__line {
   background: var(--darkCoral);
   height: 2px;
